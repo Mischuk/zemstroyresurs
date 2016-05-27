@@ -1,0 +1,17 @@
+*.swp
+*.mp4
+*.avi
+*.webm
+*~
+*.iws
+*.log
+.project
+.DS_Store
+.sass-cache
+.idea
+desktop.ini
+node_modules/
+layouts/
+source/
+PSD/
+bower_components/
