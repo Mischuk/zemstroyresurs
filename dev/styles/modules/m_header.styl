@@ -1,2 +1,155 @@
 .m_header
   position relative
+  background #fff
+  height 100px
+  box-shadow 0 0 10px rgba(0,0,0,.15)
+  text-align center
+  @media screen and (max-width: 1200px)
+    text-align right
+  .wrapper
+    padding-left 0
+    padding-right 0
+  .logo
+    width 82px
+    height 60px
+    float left
+    background black
+    margin-top 20px
+  .nav
+    display inline-block
+    vertical-align middle
+    ul
+      display table
+      width 840px
+      height 100px
+      @media screen and (max-width: 1200px)
+        width 620px
+    li
+      display table-cell
+      vertical-align middle
+      text-align center
+      a
+        segoe()
+        position relative
+        text-align center
+        display inline-block
+        vertical-align middle
+        color $black
+        font-size 16px
+        overflow hidden
+        padding-bottom 5px
+        padding-top 5px
+        @media screen and (max-width: 1200px)
+          font-size 14px
+          vertical-align top
+          padding-left 5px
+          padding-right 5px
+          text-align left
+          padding-top 2px
+          padding-bottom 2px
+          span
+            border-bottom 1px solid #fff
+        &:before
+          content ''
+          width 0
+          height 2px
+          background $green
+          position absolute
+          left 50%
+          bottom 0px
+          transition all .25s ease-in
+          @media screen and (max-width: 1200px)
+            display none
+        &:after
+          content ''
+          width 0
+          height 2px
+          background $green
+          position absolute
+          right 50%
+          bottom 0px
+          transition all .25s ease-in
+          @media screen and (max-width: 1200px)
+            display none
+        &:hover
+          &:after, &:before
+            width 51%
+            transform translateX(0%)
+            transition all .35s ease-out
+          @media screen and (max-width: 1200px)
+            span
+              border-bottom 1px solid $green
+        br
+          display none
+          @media screen and (max-width: 1200px)
+            display block
+  .contacts
+    float right
+    display table
+    height 100%
+    text-align right
+    @media screen and (max-width: 1200px)
+      display none
+    .tel
+      .title
+        display none
+      .number
+        segoe()
+        font-size 18px
+    .callback
+      margin-top 5px
+      a
+        segoe()
+        font-size 16px
+        color $green
+        border-bottom 1px dashed $green
+        letter-spacing 1px
+        &:hover
+          border-bottom 1px solid $green
+  .mobile-menu
+    display none
+    a
+      cursor pointer
+      width 32px
+      height 32px
+      border 1px solid $green
+      border-radius 50%
+      display block
+      background #fff
+      span
+        position: relative;
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: $green;
+        transition: all .2s ease-in-out
+        margin-left auto
+        margin-right auto
+        margin-top 13px
+        &:before,
+        &:after
+          position: absolute;
+          background: $green;
+          content: '';
+          width: 18px;
+          left 0
+          height: 2px;
+          transition: all .2s ease-in-out;
+        &:before
+          top -5px
+        &:after
+          top: 5px
+    a.active
+      span
+        background: transparent;
+        &:before
+          top -4px
+          transform: rotate(45deg) translate(3px, 3px);
+        &:after
+          top 6px
+          transform: rotate(-45deg) translate(4px, -4px);
+
+
+
+
+

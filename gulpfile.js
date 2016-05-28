@@ -19,7 +19,6 @@ gulp.task('connect', function () {
 // INDEX
 gulp.task('index', function () {
   return gulp.src('./dev/index.html')
-    .pipe(rigger())
     .pipe(gulp.dest('./app/'))
     .pipe(connect.reload());
 });
@@ -80,12 +79,13 @@ gulp.task('vendor', function () {
 
 gulp.task('watch', function () {
   gulp.watch("./dev/index.html", ['index']);
-  gulp.watch("./dev/templates/**/*.html", ['html']);
+  gulp.watch("./dev/templates/*.html", ['html']);
+  gulp.watch("./dev/templates/modules/*.html", ['html']);
   gulp.watch("./dev/scripts/*.js", ['js']);
   gulp.watch("./dev/images/**/*.*", ['images']);
   gulp.watch("./dev/styles/**/*.styl", ['styl']);
-  gulp.watch("./dev/styles/vendor.css", ['css']);
+  gulp.watch("./dev/styles/vendor.css", ['vendor']);
 });
 
 // Watching project files
-gulp.task('default', ['html', 'js', 'images', 'styl', 'css', 'connect', 'watch']);
+gulp.task('default', ['index', 'html', 'js', 'images', 'styl', 'vendor', 'connect', 'watch']);
